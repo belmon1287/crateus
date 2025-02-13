@@ -52,6 +52,33 @@
             color: white;
             border-color: #F44336;
         }
+        .resultado-final {
+            text-align: center;
+            margin-top: 30px;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #4CAF50;
+            animation: aparecer 0.5s ease-out;
+        }
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .resultado-final h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        .resultado-final p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .emoji-grande {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -608,25 +635,73 @@
     </div>
 
     <script>
-        // Script para verificar as respostas
+        let score = 0;
+        const totalQuestions = document.querySelectorAll('.question').length;
+
         const options = document.querySelectorAll('.option');
         options.forEach(option => {
             option.addEventListener('click', () => {
+                // Lógica de verificação de resposta
                 if (option.getAttribute('data-correct') === 'true') {
                     option.classList.add('correct');
+                    score++;
                 } else {
                     option.classList.add('incorrect');
-                    // Mostrar a resposta correta
                     const parent = option.parentElement;
                     const correctOption = parent.querySelector('.option[data-correct="true"]');
                     correctOption.classList.add('correct');
                 }
-                // Desabilitar cliques após seleção
+
+                // Desabilita outras opções
                 option.parentElement.querySelectorAll('.option').forEach(opt => {
                     opt.style.pointerEvents = 'none';
                 });
+
+                // Verifica se todas foram respondidas
+                const todasRespondidas = Array.from(document.querySelectorAll('.question'))
+                    .every(question => {
+                        return question.querySelectorAll('.option[style*="pointer-events: none"]').length > 0;
+                    });
+
+                if (todasRespondidas) {
+                    mostrarResultadoFinal();
+                }
             });
         });
+
+        function mostrarResultadoFinal() {
+            const mensagem = document.createElement('div');
+            mensagem.className = 'resultado-final';
+
+            let emoji, cor;
+            if (score === totalQuestions) {
+                emoji = '🏆🥳';
+                cor = '#4CAF50';
+            } else if (score >= totalQuestions * 0.7) {
+                emoji = '🎉😄';
+                cor = '#FFC107';
+            } else {
+                emoji = '👍🤓';
+                cor = '#2196F3';
+            }
+
+            mensagem.innerHTML = `
+                <div class="emoji-grande">${emoji}</div>
+                <h2>Quiz Concluído!</h2>
+                <p>Você acertou <strong style="color: ${cor};">${score}</strong> de ${totalQuestions} questões!</p>
+                <p>${getMensagemPersonalizada(score/totalQuestions)}</p>
+                <p>Continue aprendendo sobre nossa história!</p>
+            `;
+
+            document.body.appendChild(mensagem);
+        }
+
+        function getMensagemPersonalizada(percentual) {
+            if (percentual === 1) return 'Perfeito! Dominou completamente a história de Crateús!';
+            if (percentual >= 0.8) return 'Excelente! Você conhece bem nossa terra!';
+            if (percentual >= 0.6) return 'Bom trabalho! Mais um pouco e você domina tudo!';
+            return 'Bom início! Que tal pesquisar mais sobre nossa cidade?';
+        }
     </script>
 </body>
 </html>
