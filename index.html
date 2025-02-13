@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz sobre Crateús</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .question h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .option {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .option:hover {
+            background-color: #f0f0f0;
+        }
+        .correct {
+            background-color: #4CAF50 !important;
+            color: white;
+            border-color: #4CAF50;
+        }
+        .incorrect {
+            background-color: #F44336 !important;
+            color: white;
+            border-color: #F44336;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz sobre Crateús</h1>
+
+    <!-- Questão 1 -->
+    <div class="question">
+        <h2>1. Em que ano Crateús foi elevada à categoria de vila?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) 1832</div>
+            <div class="option" data-correct="true">b) 1842</div>
+            <div class="option" data-correct="false">c) 1852</div>
+            <div class="option" data-correct="false">d) 1862</div>
+        </div>
+    </div>
+
+    <!-- Questão 2 -->
+    <div class="question">
+        <h2>2. Qual foi o nome original de Crateús antes de sua emancipação?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) São Mateus</div>
+            <div class="option" data-correct="false">b) Princesa do Sul</div>
+            <div class="option" data-correct="false">c) Vila do Crato</div>
+            <div class="option" data-correct="true">d) Santa Maria do Crato</div>
+        </div>
+    </div>
+
+    <!-- Questão 3 -->
+    <div class="question">
+        <h2>3. Quem foi o principal líder responsável pela emancipação política de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Padre Cícero</div>
+            <div class="option" data-correct="false">b) José de Barros</div>
+            <div class="option" data-correct="true">c) Joaquim Nogueira Paranaguá</div>
+            <div class="option" data-correct="false">d) Bárbara de Alencar</div>
+        </div>
+    </div>
+
+    <!-- Questão 4 -->
+    <div class="question">
+        <h2>4. Crateús foi oficialmente elevada à categoria de cidade em qual ano?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) 1921</div>
+            <div class="option" data-correct="false">b) 1931</div>
+            <div class="option" data-correct="false">c) 1941</div>
+            <div class="option" data-correct="false">d) 1951</div>
+        </div>
+    </div>
+
+    <!-- Questão 5 -->
+    <div class="question">
+        <h2>5. Qual foi o principal fator que impulsionou o desenvolvimento inicial de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) A exploração de ouro</div>
+            <div class="option" data-correct="true">b) A pecuária e o comércio</div>
+            <div class="option" data-correct="false">c) A indústria têxtil</div>
+            <div class="option" data-correct="false">d) A agricultura de subsistência</div>
+        </div>
+    </div>
+
+    <!-- Questão 6 -->
+    <div class="question">
+        <h2>6. Crateús está localizado em qual região do estado do Ceará?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Região Metropolitana</div>
+            <div class="option" data-correct="false">b) Região do Cariri</div>
+            <div class="option" data-correct="true">c) Região dos Sertões Cearenses</div>
+            <div class="option" data-correct="false">d) Região do Litoral Leste</div>
+        </div>
+    </div>
+
+    <!-- Questão 7 -->
+    <div class="question">
+        <h2>7. Qual é o bioma predominante no município de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Mata Atlântica</div>
+            <div class="option" data-correct="true">b) Caatinga</div>
+            <div class="option" data-correct="false">c) Cerrado</div>
+            <div class="option" data-correct="false">d) Amazônia</div>
+        </div>
+    </div>
+
+    <!-- Questão 8 -->
+    <div class="question">
+        <h2>8. Qual destes municípios NÃO faz divisa com Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Novo Oriente</div>
+            <div class="option" data-correct="false">b) Independência</div>
+            <div class="option" data-correct="false">c) Ipaporanga</div>
+            <div class="option" data-correct="true">d) Sobral</div>
+        </div>
+    </div>
+
+    <!-- Questão 9 -->
+    <div class="question">
+        <h2>9. O relevo de Crateús é caracterizado principalmente por:</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Planícies litorâneas</div>
+            <div class="option" data-correct="false">b) Serras e chapadas</div>
+            <div class="option" data-correct="true">c) Depressões e planaltos</div>
+            <div class="option" data-correct="false">d) Dunas e manguezais</div>
+        </div>
+    </div>
+
+    <!-- Questão 10 -->
+    <div class="question">
+        <h2>10. Qual é o principal rio que banha o município de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Rio Jaguaribe</div>
+            <div class="option" data-correct="true">b) Rio Poti</div>
+            <div class="option" data-correct="false">c) Rio Salgado</div>
+            <div class="option" data-correct="false">d) Rio Acaraú</div>
+        </div>
+    </div>
+
+    <!-- Questão 11 -->
+    <div class="question">
+        <h2>11. A emancipação política de Crateús ocorreu em qual ano?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) 1832</div>
+            <div class="option" data-correct="true">b) 1842</div>
+            <div class="option" data-correct="false">c) 1852</div>
+            <div class="option" data-correct="false">d) 1862</div>
+        </div>
+    </div>
+
+    <!-- Questão 12 -->
+    <div class="question">
+        <h2>12. Qual foi o primeiro nome dado à região onde hoje se localiza Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Vila do Crato</div>
+            <div class="option" data-correct="false">b) Santa Maria do Crato</div>
+            <div class="option" data-correct="false">c) São Mateus</div>
+            <div class="option" data-correct="true">d) Princesa do Sul</div>
+        </div>
+    </div>
+
+    <!-- Questão 13 -->
+    <div class="question">
+        <h2>13. Qual foi o principal motivo da emancipação de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Crescimento populacional e econômico</div>
+            <div class="option" data-correct="false">b) Descoberta de ouro na região</div>
+            <div class="option" data-correct="false">c) Pressão política do governo central</div>
+            <div class="option" data-correct="false">d) Conflitos religiosos</div>
+        </div>
+    </div>
+
+    <!-- Questão 14 -->
+    <div class="question">
+        <h2>14. Quem foi o primeiro intendente (prefeito) de Crateús após sua emancipação?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Joaquim Nogueira Paranaguá</div>
+            <div class="option" data-correct="true">b) José de Barros</div>
+            <div class="option" data-correct="false">c) Padre Cícero</div>
+            <div class="option" data-correct="false">d) Bárbara de Alencar</div>
+        </div>
+    </div>
+
+    <!-- Questão 15 -->
+    <div class="question">
+        <h2>15. Qual era a principal atividade econômica de Crateús no período de sua fundação?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Agricultura</div>
+            <div class="option" data-correct="true">b) Pecuária</div>
+            <div class="option" data-correct="false">c) Mineração</div>
+            <div class="option" data-correct="false">d) Indústria têxtil</div>
+        </div>
+    </div>
+
+    <!-- Questão 16 -->
+    <div class="question">
+        <h2>16. A Lei Orgânica do Município de Crateús foi promulgada em qual ano?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) 1988</div>
+            <div class="option" data-correct="true">b) 1990</div>
+            <div class="option" data-correct="false">c) 1992</div>
+            <div class="option" data-correct="false">d) 1994</div>
+        </div>
+    </div>
+
+    <!-- Questão 17 -->
+    <div class="question">
+        <h2>17. Qual é o principal objetivo da Lei Orgânica de um município?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Regular a administração pública municipal</div>
+            <div class="option" data-correct="false">b) Definir as políticas estaduais</div>
+            <div class="option" data-correct="false">c) Estabelecer normas federais</div>
+            <div class="option" data-correct="false">d) Controlar o comércio internacional</div>
+        </div>
+    </div>
+
+    <!-- Questão 18 -->
+    <div class="question">
+        <h2>18. A Lei Orgânica de Crateús foi elaborada por qual poder?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Poder Executivo</div>
+            <div class="option" data-correct="true">b) Poder Legislativo</div>
+            <div class="option" data-correct="false">c) Poder Judiciário</div>
+            <div class="option" data-correct="false">d) Ministério Público</div>
+        </div>
+    </div>
+
+    <!-- Questão 19 -->
+    <div class="question">
+        <h2>19. Qual é o órgão responsável por revisar a Lei Orgânica do Município?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Câmara Municipal</div>
+            <div class="option" data-correct="false">b) Prefeitura</div>
+            <div class="option" data-correct="false">c) Tribunal de Contas</div>
+            <div class="option" data-correct="false">d) Assembleia Legislativa</div>
+        </div>
+    </div>
+
+    <!-- Questão 20 -->
+    <div class="question">
+        <h2>20. A Lei Orgânica de Crateús está subordinada a qual norma maior?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Constituição Federal</div>
+            <div class="option" data-correct="false">b) Constituição Estadual</div>
+            <div class="option" data-correct="false">c) Lei de Diretrizes Orçamentárias</div>
+            <div class="option" data-correct="false">d) Código Civil</div>
+        </div>
+    </div>
+
+    <!-- Questão 21 -->
+    <div class="question">
+        <h2>21. Quantos vereadores compõem a Câmara Municipal de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) 11</div>
+            <div class="option" data-correct="true">b) 13</div>
+            <div class="option" data-correct="false">c) 15</div>
+            <div class="option" data-correct="false">d) 17</div>
+        </div>
+    </div>
+
+    <!-- Questão 22 -->
+    <div class="question">
+        <h2>22. Qual é o nome do atual prefeito de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) [Nome atual]</div>
+            <div class="option" data-correct="true">b) [Nome atual]</div>
+            <div class="option" data-correct="false">c) [Nome atual]</div>
+            <div class="option" data-correct="false">d) [Nome atual]</div>
+        </div>
+    </div>
+
+    <!-- Questão 23 -->
+    <div class="question">
+        <h2>23. Qual é a função principal do Poder Legislativo no município?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Executar as políticas públicas</div>
+            <div class="option" data-correct="true">b) Fiscalizar o Poder Executivo</div>
+            <div class="option" data-correct="false">c) Administrar os serviços de saúde</div>
+            <div class="option" data-correct="false">d) Gerir o orçamento estadual</div>
+        </div>
+    </div>
+
+    <!-- Questão 24 -->
+    <div class="question">
+        <h2>24. Qual é o nome do órgão responsável pelo planejamento urbano de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Secretaria de Planejamento</div>
+            <div class="option" data-correct="false">b) Secretaria de Obras</div>
+            <div class="option" data-correct="false">c) Secretaria de Meio Ambiente</div>
+            <div class="option" data-correct="false">d) Secretaria de Educação</div>
+        </div>
+    </div>
+
+    <!-- Questão 25 -->
+    <div class="question">
+        <h2>25. Qual é o principal documento de planejamento orçamentário do município?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Lei de Diretrizes Orçamentárias (LDO)</div>
+            <div class="option" data-correct="false">b) Plano Plurianual (PPA)</div>
+            <div class="option" data-correct="true">c) Lei Orçamentária Anual (LOA)</div>
+            <div class="option" data-correct="false">d) Lei de Responsabilidade Fiscal (LRF)</div>
+        </div>
+    </div>
+
+    <!-- Questão 26 -->
+    <div class="question">
+        <h2>26. Qual é a data de aniversário de emancipação política de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) 6 de setembro</div>
+            <div class="option" data-correct="true">b) 17 de novembro</div>
+            <div class="option" data-correct="false">c) 25 de dezembro</div>
+            <div class="option" data-correct="false">d) 1º de janeiro</div>
+        </div>
+    </div>
+
+    <!-- Questão 27 -->
+    <div class="question">
+        <h2>27. Qual evento histórico é comemorado no dia 17 de novembro em Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Fundação da cidade</div>
+            <div class="option" data-correct="true">b) Emancipação política</div>
+            <div class="option" data-correct="false">c) Chegada dos primeiros colonizadores</div>
+            <div class="option" data-correct="false">d) Inauguração da primeira escola</div>
+        </div>
+    </div>
+
+    <!-- Questão 28 -->
+    <div class="question">
+        <h2>28. Qual é a principal festa religiosa de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Festa de São Pedro</div>
+            <div class="option" data-correct="false">b) Festa de Nossa Senhora de Fátima</div>
+            <div class="option" data-correct="false">c) Festa de São João</div>
+            <div class="option" data-correct="true">d) Festa de São Sebastião</div>
+        </div>
+    </div>
+
+    <!-- Questão 29 -->
+    <div class="question">
+        <h2>29. Qual é o nome do padroeiro de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) São Mateus</div>
+            <div class="option" data-correct="true">b) São Sebastião</div>
+            <div class="option" data-correct="false">c) São Francisco</div>
+            <div class="option" data-correct="false">d) São José</div>
+        </div>
+    </div>
+
+    <!-- Questão 30 -->
+    <div class="question">
+        <h2>30. Qual é a principal data cívica comemorada no município?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) 7 de setembro</div>
+            <div class="option" data-correct="false">b) 15 de novembro</div>
+            <div class="option" data-correct="false">c) 25 de março</div>
+            <div class="option" data-correct="false">d) 12 de outubro</div>
+        </div>
+    </div>
+
+    <!-- Questão 31 -->
+    <div class="question">
+        <h2>31. Qual é a principal atividade econômica de Crateús atualmente?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Agricultura</div>
+            <div class="option" data-correct="false">b) Pecuária</div>
+            <div class="option" data-correct="true">c) Comércio</div>
+            <div class="option" data-correct="false">d) Indústria</div>
+        </div>
+    </div>
+
+    <!-- Questão 32 -->
+    <div class="question">
+        <h2>32. Qual é o principal produto agrícola cultivado em Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Cana-de-açúcar</div>
+            <div class="option" data-correct="false">b) Feijão</div>
+            <div class="option" data-correct="true">c) Milho</div>
+            <div class="option" data-correct="false">d) Soja</div>
+        </div>
+    </div>
+
+    <!-- Questão 33 -->
+    <div class="question">
+        <h2>33. Qual é o principal produto da pecuária em Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Leite</div>
+            <div class="option" data-correct="true">b) Carne bovina</div>
+            <div class="option" data-correct="false">c) Ovos</div>
+            <div class="option" data-correct="false">d) Lã</div>
+        </div>
+    </div>
+
+    <!-- Questão 34 -->
+    <div class="question">
+        <h2>34. Qual é o principal setor de comércio em Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Varejo</div>
+            <div class="option" data-correct="false">b) Atacado</div>
+            <div class="option" data-correct="false">c) Exportação</div>
+            <div class="option" data-correct="false">d) Importação</div>
+        </div>
+    </div>
+
+    <!-- Questão 35 -->
+    <div class="question">
+        <h2>35. Qual é o principal desafio econômico enfrentado por Crateús atualmente?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Falta de infraestrutura</div>
+            <div class="option" data-correct="false">b) Escassez de água</div>
+            <div class="option" data-correct="true">c) Desemprego</div>
+            <div class="option" data-correct="false">d) Baixa produção agrícola</div>
+        </div>
+    </div>
+
+    <!-- Questão 36 -->
+    <div class="question">
+        <h2>36. Qual é o gentílico de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Crateuense</div>
+            <div class="option" data-correct="false">b) Cratense</div>
+            <div class="option" data-correct="false">c) Crateúno</div>
+            <div class="option" data-correct="false">d) Crateuano</div>
+        </div>
+    </div>
+
+    <!-- Questão 37 -->
+    <div class="question">
+        <h2>37. Qual é a população aproximada de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) 50.000 habitantes</div>
+            <div class="option" data-correct="false">b) 75.000 habitantes</div>
+            <div class="option" data-correct="true">c) 100.000 habitantes</div>
+            <div class="option" data-correct="false">d) 125.000 habitantes</div>
+        </div>
+    </div>
+
+    <!-- Questão 38 -->
+    <div class="question">
+        <h2>38. Qual é o principal meio de transporte utilizado em Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Ônibus</div>
+            <div class="option" data-correct="false">b) Trem</div>
+            <div class="option" data-correct="false">c) Avião</div>
+            <div class="option" data-correct="false">d) Bicicleta</div>
+        </div>
+    </div>
+
+    <!-- Questão 39 -->
+    <div class="question">
+        <h2>39. Qual é o principal ponto turístico de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Açude Realejo</div>
+            <div class="option" data-correct="false">b) Serra das Almas</div>
+            <div class="option" data-correct="false">c) Parque da Cidade</div>
+            <div class="option" data-correct="false">d) Museu Histórico</div>
+        </div>
+    </div>
+
+    <!-- Questão 40 -->
+    <div class="question">
+        <h2>40. Qual é o principal evento cultural de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Festival de Inverno</div>
+            <div class="option" data-correct="false">b) Feira do Livro</div>
+            <div class="option" data-correct="false">c) Carnaval</div>
+            <div class="option" data-correct="true">d) Festa do Município</div>
+        </div>
+    </div>
+
+    <!-- Questão 41 -->
+    <div class="question">
+        <h2>41. Qual é o nome do principal jornal de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) O Crateúno</div>
+            <div class="option" data-correct="false">b) O Povo</div>
+            <div class="option" data-correct="false">c) Diário do Nordeste</div>
+            <div class="option" data-correct="false">d) Jornal de Crateús</div>
+        </div>
+    </div>
+
+    <!-- Questão 42 -->
+    <div class="question">
+        <h2>42. Qual é o nome da principal instituição de ensino superior de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Universidade Federal do Ceará (UFC)</div>
+            <div class="option" data-correct="false">b) Universidade Estadual do Ceará (UECE)</div>
+            <div class="option" data-correct="true">c) Faculdade de Educação, Ciências e Letras de Crateús (FAEC)</div>
+            <div class="option" data-correct="false">d) Instituto Federal do Ceará (IFCE)</div>
+        </div>
+    </div>
+
+    <!-- Questão 43 -->
+    <div class="question">
+        <h2>43. Qual é o principal clube de futebol de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Crateús Esporte Clube</div>
+            <div class="option" data-correct="false">b) Atlético Crateuense</div>
+            <div class="option" data-correct="false">c) Flamengo de Crateús</div>
+            <div class="option" data-correct="false">d) São Paulo de Crateús</div>
+        </div>
+    </div>
+
+    <!-- Questão 44 -->
+    <div class="question">
+        <h2>44. Qual é o principal hospital de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Hospital Regional de Crateús</div>
+            <div class="option" data-correct="false">b) Hospital São Mateus</div>
+            <div class="option" data-correct="false">c) Hospital Municipal de Crateús</div>
+            <div class="option" data-correct="false">d) Hospital Santa Maria</div>
+        </div>
+    </div>
+
+    <!-- Questão 45 -->
+    <div class="question">
+        <h2>45. Qual é o principal rio que abastece Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Rio Poti</div>
+            <div class="option" data-correct="false">b) Rio Jaguaribe</div>
+            <div class="option" data-correct="false">c) Rio Salgado</div>
+            <div class="option" data-correct="false">d) Rio Acaraú</div>
+        </div>
+    </div>
+
+    <!-- Questão 46 -->
+    <div class="question">
+        <h2>46. Qual é o principal distrito de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="false">a) Santa Maria</div>
+            <div class="option" data-correct="false">b) São Mateus</div>
+            <div class="option" data-correct="true">c) Realejo</div>
+            <div class="option" data-correct="false">d) Nova Esperança</div>
+        </div>
+    </div>
+
+    <!-- Questão 47 -->
+    <div class="question">
+        <h2>47. Qual é o principal produto artesanal de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Redes</div>
+            <div class="option" data-correct="false">b) Cerâmica</div>
+            <div class="option" data-correct="false">c) Bordados</div>
+            <div class="option" data-correct="false">d) Cestaria</div>
+        </div>
+    </div>
+
+    <!-- Questão 48 -->
+    <div class="question">
+        <h2>48. Qual é o principal problema ambiental enfrentado por Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Desertificação</div>
+            <div class="option" data-correct="false">b) Poluição do ar</div>
+            <div class="option" data-correct="false">c) Desmatamento</div>
+            <div class="option" data-correct="false">d) Contaminação do solo</div>
+        </div>
+    </div>
+
+    <!-- Questão 49 -->
+    <div class="question">
+        <h2>49. Qual é o principal meio de comunicação de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Rádio</div>
+            <div class="option" data-correct="false">b) TV</div>
+            <div class="option" data-correct="false">c) Internet</div>
+            <div class="option" data-correct="false">d) Jornal impresso</div>
+        </div>
+    </div>
+
+    <!-- Questão 50 -->
+    <div class="question">
+        <h2>50. Qual é o principal símbolo cultural de Crateús?</h2>
+        <div class="options">
+            <div class="option" data-correct="true">a) Festa de São Sebastião</div>
+            <div class="option" data-correct="false">b) Museu Histórico</div>
+            <div class="option" data-correct="false">c) Serra das Almas</div>
+            <div class="option" data-correct="false">d) Açude Realejo</div>
+        </div>
+    </div>
+
+    <script>
+        // Script para verificar as respostas
+        const options = document.querySelectorAll('.option');
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                if (option.getAttribute('data-correct') === 'true') {
+                    option.classList.add('correct');
+                } else {
+                    option.classList.add('incorrect');
+                    // Mostrar a resposta correta
+                    const parent = option.parentElement;
+                    const correctOption = parent.querySelector('.option[data-correct="true"]');
+                    correctOption.classList.add('correct');
+                }
+                // Desabilitar cliques após seleção
+                option.parentElement.querySelectorAll('.option').forEach(opt => {
+                    opt.style.pointerEvents = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
